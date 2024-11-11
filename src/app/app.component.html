@@ -1,148 +1,122 @@
-<!-- <div class="config-section">
-  <h3>Configure Hypotheses</h3>
-  <form>
-    <div class="form-group">
-      <label for="ubisoftScore">Ubisoft Score (IPS):</label>
-      <select id="ubisoftScore" [(ngModel)]="hypotheses.ipsUbisoft" name="ubisoftScore">
-        <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-      </select>
+<div class="main-container">
+  <!-- Hypotheses Section -->
+  <div class="config-section">
+    <h3>Configurer les Hypothèses</h3>
+    <div class="config-container">
+      <!-- IPS Hypotheses -->
+      <div class="ips-section">
+        <h4>Hypothèses IPS</h4>
+        <form>
+          <div class="form-group">
+            <label for="ubisoftScore">Ubisoft Score (IPS):</label>
+            <select id="ubisoftScore" [(ngModel)]="hypotheses.ipsUbisoft" name="ubisoftScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="kotlinScore">Kotlin Score (IPS):</label>
+            <select id="kotlinScore" [(ngModel)]="hypotheses.ipsKotlin" name="kotlinScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="windowsScore">Windows Score (IPS):</label>
+            <select id="windowsScore" [(ngModel)]="hypotheses.ipsWindows" name="windowsScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="licenceScore">Licence Score (IPS):</label>
+            <select id="licenceScore" [(ngModel)]="hypotheses.ipsLicence" name="licenceScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="entrepreneurScoreIPS">Entrepreneur Score (IPS):</label>
+            <select id="entrepreneurScoreIPS" [(ngModel)]="hypotheses.ipsEntrepreneur" name="entrepreneurScoreIPS">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <!-- ASTRE Hypotheses -->
+      <div class="astre-section">
+        <h4>Hypothèses ASTRE</h4>
+        <form>
+          <div class="form-group">
+            <label for="stmicroScore">STMicroelectronics Score (ASTRE):</label>
+            <select id="stmicroScore" [(ngModel)]="hypotheses.astreSTMicro" name="stmicroScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="assembleurScore">Assembleur Score (ASTRE):</label>
+            <select id="assembleurScore" [(ngModel)]="hypotheses.astreAssembleur" name="assembleurScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="linuxScore">Linux Score (ASTRE):</label>
+            <select id="linuxScore" [(ngModel)]="hypotheses.astreLinux" name="linuxScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cpgeScore">CPGE Score (ASTRE):</label>
+            <select id="cpgeScore" [(ngModel)]="hypotheses.astreCPGE" name="cpgeScore">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="entrepreneurScoreASTRE">Entrepreneur Score (ASTRE):</label>
+            <select id="entrepreneurScoreASTRE" [(ngModel)]="hypotheses.astreEntrepreneur" name="entrepreneurScoreASTRE">
+              <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
+            </select>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="kotlinScore">Kotlin Score (IPS):</label>
-      <select id="kotlinScore" [(ngModel)]="hypotheses.ipsKotlin" name="kotlinScore">
-        <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="stmicroScore">STMicroelectronics Score (ASTRE):</label>
-      <select id="stmicroScore" [(ngModel)]="hypotheses.astreSTMicro" name="stmicroScore">
-        <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-      </select>
-    </div>
-  
-  </form>
-  <button (click)="updateScores()">Update Chart</button>
-</div> -->
 
-
-<div class="config-section">
-  <h3>Configurer les Hypothèses</h3>
-  <div class="config-container">
-    <!-- IPS Hypotheses -->
-    <div class="ips-section">
-      <h4>Hypothèses IPS</h4>
-      <form>
-        <div class="form-group">
-          <label for="ubisoftScore">Ubisoft Score (IPS):</label>
-          <select id="ubisoftScore" [(ngModel)]="hypotheses.ipsUbisoft" name="ubisoftScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="kotlinScore">Kotlin Score (IPS):</label>
-          <select id="kotlinScore" [(ngModel)]="hypotheses.ipsKotlin" name="kotlinScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="windowsScore">Windows Score (IPS):</label>
-          <select id="windowsScore" [(ngModel)]="hypotheses.ipsWindows" name="windowsScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="licenceScore">Licence Score (IPS):</label>
-          <select id="licenceScore" [(ngModel)]="hypotheses.ipsLicence" name="licenceScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="entrepreneurScoreIPS">Entrepreneur Score (IPS):</label>
-          <select id="entrepreneurScoreIPS" [(ngModel)]="hypotheses.ipsEntrepreneur" name="entrepreneurScoreIPS">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-      </form>
-    </div>
-
-    <!-- ASTRE Hypotheses -->
-    <div class="astre-section">
-      <h4>Hypothèses ASTRE</h4>
-      <form>
-        <div class="form-group">
-          <label for="stmicroScore">STMicroelectronics Score (ASTRE):</label>
-          <select id="stmicroScore" [(ngModel)]="hypotheses.astreSTMicro" name="stmicroScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="assembleurScore">Assembleur Score (ASTRE):</label>
-          <select id="assembleurScore" [(ngModel)]="hypotheses.astreAssembleur" name="assembleurScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="linuxScore">Linux Score (ASTRE):</label>
-          <select id="linuxScore" [(ngModel)]="hypotheses.astreLinux" name="linuxScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="cpgeScore">CPGE Score (ASTRE):</label>
-          <select id="cpgeScore" [(ngModel)]="hypotheses.astreCPGE" name="cpgeScore">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="entrepreneurScoreASTRE">Entrepreneur Score (ASTRE):</label>
-          <select id="entrepreneurScoreASTRE" [(ngModel)]="hypotheses.astreEntrepreneur" name="entrepreneurScoreASTRE">
-            <option *ngFor="let score of scoreOptions" [value]="score">{{ score }}</option>
-          </select>
-        </div>
-      </form>
-    </div>
+    <button (click)="updateScores()">Mettre à jour les scores</button>
   </div>
 
-  <button (click)="updateScores()">Mettre à jour les scores</button>
+  <!-- Table Section -->
+  <div class="student-table">
+    <h3>Tableau des Résultats</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Étudiant</th>
+            <th>Score IPS</th>
+            <th>Score ASTRE</th>
+            <th>Pourcentage IPS</th>
+            <th>Pourcentage ASTRE</th>
+            <th>Prédiction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of Eleve">
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.score_ips }}</td>
+            <td>{{ student.score_astre }}</td>
+            <td>{{ calculatePercentage(student.score_ips, student.score_astre, 'IPS') }}%</td>
+            <td>{{ calculatePercentage(student.score_ips, student.score_astre, 'ASTRE') }}%</td>
+            <td>{{ student.score_ips > student.score_astre ? 'IPS' : 'ASTRE' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-
-
-
 
 <app-student-chart *ngIf="Eleve.length > 0" [students]="Eleve"></app-student-chart>
-
-<div class="student-table" *ngIf="Eleve.length > 0">
-  <h3>Tableau des Résultats</h3>
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Étudiant</th>
-          <th>Score IPS</th>
-          <th>Score ASTRE</th>
-          <th>Pourcentage IPS</th>
-          <th>Pourcentage ASTRE</th>
-          <th>Prédiction</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let student of Eleve">
-          <td>{{ student.student_id }}</td>
-          <td>{{ student.score_ips }}</td>
-          <td>{{ student.score_astre }}</td>
-          <td>{{ calculatePercentage(student.score_ips, student.score_astre, 'IPS') }}%</td>
-          <td>{{ calculatePercentage(student.score_ips, student.score_astre, 'ASTRE') }}%</td>
-          <td>{{ student.score_ips > student.score_astre ? 'IPS' : 'ASTRE' }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
